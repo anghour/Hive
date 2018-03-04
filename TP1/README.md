@@ -52,7 +52,7 @@ WITH SERDEPROPERTIES (
 ```
 ## Structure de la table ``` Passenger```
 
-![alt text](https://github.com/anghour/Hive/blob/master/TP1/img/passenger_orc.png)
+![alt text](https://github.com/anghour/Hive/blob/master/TP1/img/Passenger_struct.png)
 
 ## chargement du fichier ``` train.csv``` dans la table ``` Passenger ```
 
