@@ -14,7 +14,7 @@ Par la commande suivate :
 beeline
 ```
 
-## Connection 
+## Connection au hive du cluster
 
 Par la commande suivante
 
@@ -25,31 +25,64 @@ Par la commande suivante
 ## Création de la base de données "Titanic"
 
 ```
-la commande
+create database titanic;
 ```
 
-## Création de mon tableau
-
-
-```
-la commande
-```
-
-## chargement de données
-
-
+## Création de la table ``` Passenger ```
 
 ```
-la commande
+CREATE TABLE IF NOT EXISTS Passenger(  
+  PassengerId INT,  
+  Survived INT,  
+  Pclass INT,
+  Name STRING,  
+  Sex STRING,  
+  Age INT,  
+  SibSp INT,  
+  Parch INT,
+  Ticket STRING,  
+  Fare DOUBLE,  
+  Cabin STRING,  
+  Embarked STRING  
+) ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'  
+WITH SERDEPROPERTIES (  
+  "separatorChar" = ",",  
+  "quoteChar"     = '"'  
+) STORED AS TEXTFILE;  
+```
+## Structure de la table ``` Passenger```
+
+![alt text](https://github.com/anghour/Hive/blob/master/TP1/img/passenger_orc.png)
+
+## chargement du fichier ``` train.csv``` dans la table ``` Passenger ```
+
+```
+LOAD DATA LOCAL INPATH '/home/ubuntu/data/train.csv' OVERWRITE INTO TABLE Passenger;
 ```
 
 ## Optimisation par ORC
-### Création du tab ORC
-### Chargement du tab ORC
+### Création de la table Passenger_ORC
+```
+CREATE TABLE Passenger_ORC (  
+PassengerId INT,  
+  Survived INT,  
+  Pclass INT,
+  Name STRING,  
+  Sex STRING,  
+  Age INT,  
+  SibSp INT,  
+  Parch INT,
+  Ticket STRING,  
+  Fare DOUBLE,  
+  Cabin STRING,  
+  Embarked STRING  
+) STORED AS ORC tblproperties ("orc.compress" = "SNAPPY");
+```
+### Insertion de données dans la table ``` Passenger_ORC``` à partit de la table ``` Passenger ```
 
-## Structure de mon tableau ORC
-
-![alt text](https://github.com/anghour/Hive/blob/master/TP1/img/passenger_orc.png)
+```
+INSERT INTO TABLE Passenger_ORC SELECT * FROM Passenger;
+```
 
 ## Quelques requêtes
 ### Total de voyageurs par sex
