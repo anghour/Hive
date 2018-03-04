@@ -60,7 +60,7 @@ SELECT COUNT(passengerid) as Nombre_Passagers, sex FROM passenger_orc GROUP BY s
 ```
 * **Réponse**  
 
-![alt text](https://github.com/anghour/Hive/blob/master/TP1/img/passenger_orc.png)
+![alt text](https://github.com/anghour/Hive/blob/master/TP1/img/req_1.png)
 
 ### Les survivés par sex
 
@@ -70,19 +70,21 @@ SELECT COUNT(passengerid) as Nombre_Passagers, sex FROM passenger_orc GROUP BY s
 SELECT sex, COUNT(passengerid) as Survived_Number FROM passenger_orc WHERE survived = 1 GROUP BY sex;
 ```
 * **Réponse**  
-![alt text](https://github.com/anghour/Hive/blob/master/TP1/img/passenger_orc.png)
+![alt text](https://github.com/anghour/Hive/blob/master/TP1/img/req_2.png)
 
 ### Les morts par classe
 * **Requête**
 ```
-select count(passengerid) as nombre_morts, pclass as Classe from passenger_orc where survived = 0 group by pclass;
+SELECT COUNT(passengerid) as nombre_morts, pclass as Classe FROM passenger_orc WHERE survived = 0 GROUP BY pclass;
 ```
 * **Réponse**  
-![alt text](https://github.com/anghour/Hive/blob/master/TP1/img/passenger_orc.png)
+![alt text](https://github.com/anghour/Hive/blob/master/TP1/img/req_3.png)
 ### Les morts par age et sex
 * **Requête**
 ```
 SELECT COUNT(passengerid) as nombre_morts, age, sex FROM passenger_orc GROUP BY age, sex;
 ```
 * **Réponse**  
-![alt text](https://github.com/anghour/Hive/blob/master/TP1/img/passenger_orc.png)
+![alt text](https://github.com/anghour/Hive/blob/master/TP1/img/req_4.1.png)
+...  
+![alt text](https://github.com/anghour/Hive/blob/master/TP1/img/req_4.2.png)
