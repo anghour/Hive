@@ -1,10 +1,9 @@
 # TP1 – Hive
 
-One Paragraph of project description goes here
 
 ## Data Description
 
-J'ai utilisé la base de donnée "Titanic" de  [kaggle](https://www.kaggle.com/c/titanic/data). Cette base de données est composée principalement de deux fichiers, "train.csv" et "test.csv". Pour mon TP j'ai utilisé le fichier "train.csv". Ce dernier contient des données sur les passagers de Titanic en 891 ligne et 11 colonnes (passengerId, survival, pclass, name, sex, age, sibsp, parch, ticket, fare, cabin, embarked)
+J'ai utilisé la base de donnée "Titanic" de  [kaggle](https://www.kaggle.com/c/titanic/data). Cette base de données est composée principalement de deux fichiers, "train.csv" et "test.csv". Pour mon TP j'ai utilisé le fichier "train.csv". Ce dernier contient des données sur les passagers de Titanic en 891 ligne et 12 colonnes (passengerId, survival, pclass, name, sex, age, sibsp, parch, ticket, fare, cabin, embarked)
 
 ## Lacement de beeline
 
