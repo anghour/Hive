@@ -22,7 +22,7 @@ Par la commande suivante
 !connect jdbc:hive2://
 ```
 
-## Création de la base de données "Titanic"
+## Création de la base de données ``` Titanic ```
 
 ```
 create database titanic;
@@ -78,7 +78,7 @@ PassengerId INT,
   Embarked STRING  
 ) STORED AS ORC tblproperties ("orc.compress" = "SNAPPY");
 ```
-### Insertion de données dans la table ``` Passenger_ORC``` à partit de la table ``` Passenger ```
+### Insertion de données dans la table ``` Passenger_ORC``` à partir de la table ``` Passenger ```
 
 ```
 INSERT INTO TABLE Passenger_ORC SELECT * FROM Passenger;
