@@ -59,9 +59,8 @@ la commande
 SELECT COUNT(passengerid) as Passenger_ID, sex FROM passenger_orc GROUP BY sex;
 ```
 * **Réponse**
-```
+
 ![alt text](https://github.com/anghour/Hive/blob/master/TP1/img/passenger_orc.png)
-```
 
 ### Les survivés par sex
 
