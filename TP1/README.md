@@ -82,9 +82,9 @@ SELECT COUNT(passengerid) as nombre_morts, pclass as Classe FROM passenger_orc W
 ### Les morts par age et sex
 * **Requête**
 ```
-SELECT COUNT(passengerid) as nombre_morts, age, sex FROM passenger_orc GROUP BY age, sex;
+SELECT COUNT(passengerid) as nombre_morts, age, sex FROM passenger_orc WHERE survived = 0 GROUP BY age, sex;
 ```
 * **Réponse**  
-![alt text](https://github.com/anghour/Hive/blob/master/TP1/img/req_4.1.png)
+![alt text](https://github.com/anghour/Hive/blob/master/TP1/img/req_4.1.png)  
 ...  
 ![alt text](https://github.com/anghour/Hive/blob/master/TP1/img/req_4.2.png)
