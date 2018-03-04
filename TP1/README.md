@@ -50,6 +50,7 @@ la commande
 ## Structure de mon tableau ORC
 
 Image
+![alt text](https://github.com/anghour/Hive/blob/master/TP1/img/passenger_orc.png)
 
 ## Quelques requêtes
 * Total de voyageurs par sex
@@ -59,5 +60,7 @@ Image
 SELECT COUNT(passengerid) as Passenger_ID, sex FROM passenger_orc GROUP BY sex;
 ```
 * **Réponse**
+
+
 
 
