@@ -56,7 +56,7 @@ la commande
 * **Requête**
 
 ```
-SELECT COUNT(passengerid) as Passenger_ID, sex FROM passenger_orc GROUP BY sex;
+SELECT COUNT(passengerid) as Nombre_Passagers, sex FROM passenger_orc GROUP BY sex;
 ```
 * **Réponse**  
 
@@ -69,7 +69,7 @@ SELECT COUNT(passengerid) as Passenger_ID, sex FROM passenger_orc GROUP BY sex;
 ```
 SELECT sex, COUNT(passengerid) as Survived_Number FROM passenger_orc WHERE survived = 1 GROUP BY sex;
 ```
-* **Réponse**
+* **Réponse**  
 ![alt text](https://github.com/anghour/Hive/blob/master/TP1/img/passenger_orc.png)
 
 ### Les morts par classe
@@ -77,12 +77,12 @@ SELECT sex, COUNT(passengerid) as Survived_Number FROM passenger_orc WHERE survi
 ```
 select count(passengerid) as nombre_morts, pclass as Classe from passenger_orc where survived = 0 group by pclass;
 ```
-* **Réponse**
+* **Réponse**  
 ![alt text](https://github.com/anghour/Hive/blob/master/TP1/img/passenger_orc.png)
 ### Les morts par age et sex
 * **Requête**
 ```
 SELECT COUNT(passengerid) as nombre_morts, age, sex FROM passenger_orc GROUP BY age, sex;
 ```
-* **Réponse**
+* **Réponse**  
 ![alt text](https://github.com/anghour/Hive/blob/master/TP1/img/passenger_orc.png)
