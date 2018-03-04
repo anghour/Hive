@@ -13,7 +13,7 @@ Par la commande suivate :
 beeline
 ```
 
-## Connection au hive du cluster
+## Connexion au hive du cluster
 
 Par la commande suivante
 
