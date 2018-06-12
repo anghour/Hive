@@ -94,7 +94,7 @@ SELECT COUNT(passengerid) as Nombre_Passagers, sex FROM passenger_orc GROUP BY s
 
 ![alt text](https://github.com/anghour/Hive/blob/master/TP1/img/req_1.png)
 
-### Les survivés par sex
+### Les survivants par sex
 
 * **Requête**
 
